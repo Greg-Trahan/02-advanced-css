@@ -1,37 +1,40 @@
 * {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 16px;
   background-color: #4F6272;
   color: #F7ECE1;
 }
 
 /* Header styling */
-header h1 {
-  display: inline-block;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header nav {
-  float: right;
-  border-style: solid;
-  border-color: #b2abf2;
-  border-top: 0px;
-  border-right: 0px;
-  border-bottom: 0px; 
+header nav ul {
+  display: flex;
+  justify-content: center; 
+  padding-left: 0px;
+  padding-right: 40px;
 }
 
 header nav ul li {
   display: inline-block;
   list-style-type: none;
+  font-size: 1.5rem;
+  padding: .5rem;
 }
 
 h1 {
   font-size: 3rem;
 }
 
-
 /* Body styling */
 #about-me {
-  background-color: #bc4b51;
+  background-color: #502e30;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 h2 {
@@ -39,31 +42,57 @@ h2 {
 }
 
 #greg-photo {
-  height: 20em;
+  display: inline;
+  height: 25em;
 }
 
-section img{
-  height: 20em;
+#about-me p {
+  display: inline;
+  background-color: #502e30;
+  justify-content: space-between;
+}
+
+.picture{
+  flex: 1 0 0;
+  /* display:flex; */
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.picture.picture-main {
+  flex-shrink: 0;
+  flex-grow: 0;
   width: 100%;
-  border: 0.5em;
-  /* padding: 0.5em  This is wrong. It screws up my size percentages */
+  outline: 1px solid red;
 }
 
 #my-work {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-}
+  justify-content: space-evenly;
+} 
 
 #project1 {
   width: 100%;
 }
 
-
 /* Footer styling */
-footer h2 {
-  display: inline-block;
+
+
+
+/* footer h2 {
+  display: inline-block; 
+} */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 footer ul {
@@ -80,31 +109,50 @@ footer ul li {
   list-style-type: none;
 }
 
-
 /* Display styleing */
 @media screen and (min-width:992px){
-  section img {
-    width: 25%;
-  }
   #project1 {
-    height: 20em;
-    width: 50em;
-    justify-content: space; /*This isn't working. The first image is supposed to stay in the middle when it gets too big*/
+    min-width: 992px;
+    max-width: 992px;    
+
   }
   .break {
     flex-basis: 100%;
     height: 0;
   }
+  /* #my-work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }  */
 }
 
+/* @media screen and (max-width: 1140px){
+  #my-work {
+    flex-wrap: nowrap;
+  }
+} */
+
 @media screen and (max-width:992px){
-  section img {
-    width: 50%;
+  .picture {
+    flex-basis: 25%;
+  }
+  /* #my-work {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+}
+
+@media screen and (max-width:768px){
+  .picture {
+    flex-basis: 50%;
   }
 }
 
 @media screen and (max-width:576px){
-  section img {
-    width: 100%;;
+  .picture {
+    flex-basis: 100%;
   }
 }
