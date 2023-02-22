@@ -7,65 +7,105 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Greg's Portfolio</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greg's Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body>
-  <header>
-    <h1>Greg Trahan</h1>
-    <nav>
+  <body>
+    <header>
+      <h1>Greg Trahan</h1>
+      <nav>
+        <ul>
+          <li><a href="#title-about">About Me</a></li>
+          <li><a href="#title-work">My Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2 id="title-about">About Me</h2>
+
+      <section id="about-me">
+        <img
+          id="greg-photo"
+          src="./assets/images/head-shot.jpg"
+          alt="Greg Trahan"
+        />
+        <p>
+          My name is Greg Trahan. Currently, I am enrolled in the University of
+          Minnesota Full-Stack Coding Bootcamp, and I have aspirations to become
+          a full-stack developer. Prior to the bootcamp, I worked as a Research
+          Technologist at the Mayo Clinic studying gene therapies for collagen
+          disorders, and then as a Research Associate at Bio-Techne. In my free
+          time, I am an avid reader of science fiction and fantasy novels, with
+          Brandon Sanderson being one of my favorite authors. My two cats and I
+          live with three housemates, where we are frequently found playing
+          pinochle, board games, or watching the Great British Baking Show.
+        </p>
+      </section>
+
+      <h2 id="title-work">My Work</h2>
+      <section id="my-work">
+        <a
+          class="picture1"
+          href="https://greg-trahan.github.io/01-semantic-html/"
+        >
+          <img
+            id="project1"
+            src="./assets/images/horiseo-screengrab.png"
+            alt="Project 1"
+          />
+        </a>
+        <div class="break"></div>
+        <!--This keeps the main project in its own line-->
+        <a href="https://google.com">
+          <img
+            class="picture"
+            src="./assets/images/placeholder-1.png"
+            alt="Project 2"
+          />
+        </a>
+        <a href="https://google.com">
+          <img
+            class="picture"
+            src="./assets/images/placeholder-2.png"
+            alt="Project 3"
+          />
+        </a>
+        <a href="https://google.com">
+          <img
+            class="picture"
+            src="./assets/images/placeholder-3.png"
+            alt="Project 4"
+          />
+        </a>
+        <a href="https://google.com">
+          <img
+            class="picture"
+            src="./assets/images/placeholder-4.png"
+            alt="Project 5"
+          />
+        </a>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <h2 id="title">Contact Me</h2>
       <ul>
-        <li><a href="#title-about">About Me</a></li>
-        <li><a href="#title-work">My Work</a></li>
-        <li><a href="#contact">Contact</a></li> 
+        <li><a href="tel:0123456789">651.280.9402</a></li>
+        <li>
+          <a href="mailto:thisismyemail@gmail.com">trahan.greg@gmail.com</a>
+        </li>
+        <li><a href="https://github.com/Greg-Trahan">GitHub</a></li>
+        <li>
+          <a href="https://linkedin.com/in/greg-trahan-1489azx56">LinkedIn</a>
+        </li>
       </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <h2 id="title-about">About Me</h2>
-
-    <section id="about-me">
-      <img id="greg-photo" src="./assets/images/head-shot.jpg" alt="Greg Trahan">
-      <p>My name is Greg Trahan. Currently, I am enrolled in the University of Minnesota Full-Stack Coding Bootcamp, and I have aspirations to become a full-stack developer.
-      Prior to the bootcamp, I worked as a Research Technologist at the Mayo Clinic studying gene therapies for collagen disorders, and then as a Research Associate at Bio-Techne. In my free time, I am an avid reader of science fiction and fantasy novels, with Brandon Sanderson being one of my favorite authors. My two cats and I live with three housemates, where we are frequently found playing pinochle, board games, or watching the Great British Baking Show.</p>
-    </section>
-
-    <h2 id="title-work">My Work</h2>
-    <section id="my-work">
-      
-      <a class="picture1" href="https://greg-trahan.github.io/01-semantic-html/">
-        <img  id="project1" src="./assets/images/horiseo-screengrab.png" alt="Project 1">
-      </a>
-      <div class="break"></div> <!--This keeps the main project in its own line-->
-      <a href="https://google.com">
-        <img class="picture" src="./assets/images/placeholder-1.png" alt="Project 2">
-      </a>
-      <a href="https://google.com">
-        <img class="picture" src="./assets/images/placeholder-2.png" alt="Project 3">
-      </a>
-      <a href="https://google.com">
-        <img class="picture" src="./assets/images/placeholder-3.png" alt="Project 4">
-      </a>
-      <a href="https://google.com">
-        <img class="picture" src="./assets/images/placeholder-4.png" alt="Project 5">
-      </a>
-    </section>
-  </main>
-
-  <footer id="contact">
-    <h2 id="title"> Contact Me</h2>
-    <ul>
-      <li><a href="tel:0123456789">012.345.6789</a></li>
-      <li><a href="mailto:thisismyemail@gmail.com">thisismyemail@gmail.com</a></li>
-      <li><a href="https://github.com/Greg-Trahan">GitHub</a></li>
-      <li><a href="https://linkedin.com/in/greg-trahan-1489azx56">LinkedIn</a></li>
-    </ul>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
